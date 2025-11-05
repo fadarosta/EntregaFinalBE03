@@ -1,20 +1,19 @@
-# Pet Adoption API – BackEnd Avanzado CoderHouse
+# Entrega Final - BackEnd Avanzado 03
 
-Aplicación segura para gestión de adopciones de mascotas.
+API para gestión de adopciones de mascotas.
 
-## 🔒 Seguridad
+## Imagen en Docker Hub
 
-- Cumple con controles OWASP Top 10
-- Usa `helmet`, `rate-limiting`, `input validation`
-- Variables de entorno para configuración sensible
+La imagen de la app está disponible en:
 
-## 📚 Documentación
+🔗 [fadarosta/entregafinal-be03](https://hub.docker.com/r/fadarosta/entregafinal-be03)
 
-Swagger disponible en:  
-http://localhost:8080/api/docs
+### Cómo ejecutar la app con Docker
 
-## 🧪 Tests
+1. Ejecutar **MongoDB localmente** en el puerto `27017`.
+2. Ejecutar el contenedor:
 
---bash--
-npm test
-# Usa base de datos: petadoption_test
+```bash
+docker run -p 8080:8080 \
+  -e MONGO_URI=mongodb://host.docker.internal:27017/petadoption \
+  fadarosta/entregafinal-be03
