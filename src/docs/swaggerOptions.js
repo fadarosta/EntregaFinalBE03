@@ -1,4 +1,3 @@
-// src/docs/swaggerOptions.js
 import { serve, setup } from 'swagger-ui-express';
 import swaggerJsdoc from 'swagger-jsdoc';
 
@@ -17,7 +16,7 @@ const options = {
       },
     ],
   },
-  apis: ['./src/routes/*.js'], // Aquí leerá los comentarios JSDoc
+  apis: ['./src/routes/*.js'],
 };
 
 const specs = swaggerJsdoc(options);
